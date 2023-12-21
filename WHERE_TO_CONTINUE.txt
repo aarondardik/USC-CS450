@@ -1,0 +1,57 @@
+FIRST OF ALL:
+
+Once the exam is over...
+Before continuing working on the program go through the spec once again...
+Make sure to download the latest version of the spec from the website.
+
+
+WHERE TO CONTINUE:
+
+Remember, look at the graph that I drew... Basically, phase 1 and
+phase 2 are done. Now phase 3 is to "let the client know if some students don't
+exist by the list provided by it".
+
+So for that phase, I simply have to send the message to user (regardless if
+the user there are students that don't exist ot not). Maybe one idea could be
+that if there are 0 students that don't exist, then simply send a message
+with size 0.
+
+Of course I have to implement all the sending functionality in serverM.c
+because it still does not have... HOWEVER it should be very straightforward
+since I already have the code in clientM.c, so maybe just few modificatin will
+be required.
+
+
+SOME QUESTION TO ASK TO TA AMANDA OR IN PIAZZA:
+
+--> Can you provide us with more test cases?
+    Also, the sample run of the program that is provided in the spec does not
+    match with the CE.txt and EE.txt files that are provided. For example, in the
+    client terminal it says that luis dies not exist but it is present in
+    EE.txt. Also, bob is not neither in CE.txt nor in EE.txt but it the sample
+    run it says that bob exist.
+
+    Again, more test cases would be great.
+
+--> Make sure about the algorithm that we have to implement.
+
+    Does the final result sent to the user the intntersection of all the
+    students? Or partial intersections must also sent to the user?
+
+--> Make sure that A is CE and B is EE.
+
+--> Let her know that since [1,1] is not allowed in the input, then
+    something like [17,17] should not be allowed in the output.
+
+    I think the correct whay to respresent an interval of only 1 course in
+    the input would be something like:
+
+        [[4,8],[11],[17,18]] where [11] means that there is only one course.
+
+    And the same will be in the output.
+
+    My point here is that something like:
+
+    [[4,8],[11,11],[17,18]] in NOT correct neither in the input nor in the
+    output, right?
+
